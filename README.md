@@ -5,7 +5,7 @@ How to run the project:
 1) It is necessary to change the bot directory of the following files:
    progetto/src/rasa_ros/scripts/rasa_action.sh
    progetto/src/rasa_ros/scripts/rasa_server.sh
-2) Move to the project folder
+2) Move to the project folder and create a directory src, putting all the files in
 3) Run the following commands:
    catkin build
    source devel/setup.bash
