@@ -1,0 +1,3 @@
+<launch>
+        <node pkg="ros_audio_pkg" type="voice_detection.py" name="voice_detection" output="screen"/>
+</launch>
