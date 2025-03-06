@@ -1,0 +1,585 @@
+version: "3.1"
+stories:
+- story: Test_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_bot_identity
+  - action: utter_ask_identity
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - intent: ask_time
+  - action: action_show_time
+  - intent: ask_date
+  - action: action_ask_date
+  - intent: mall_hours
+  - action: utter_mall_hours
+
+
+- story:  Test_2
+  steps:
+  - intent: count_people
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - line_id: null
+  - intent: count_people_more_info
+    entities:
+    - gender: male
+  - action: action_count_people_more_info
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - line_id: null
+  - intent: count_people
+    entities:
+    - gender: female
+    - has_bag: bag
+  - action: action_count_people
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - has_bag: bag
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - line_id: null
+
+- story: test_3
+  steps:
+  - intent: count_people
+    entities:
+    - gender: female
+    - has_hat: hat
+    - line_id: '1'
+  - slot_was_set:
+    - line_id: '1'
+  - action: action_count_people
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: hat
+  - slot_was_set:
+    - line_id: '1'
+  - intent: ask_individual_info
+  - action: action_get_individual_info
+
+- story: test_4
+  steps:
+  - intent: compare_gender
+    entities:
+    - gender: male
+    - gender: female
+  - action: action_compare_gender
+  - intent: compare_attributes
+    entities:
+    - gender: male
+    - has_bag: bag
+    - has_hat: hat
+  - action: action_compare_attributes
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_5
+  steps:
+  - intent: search_person
+  - action: action_search_person
+  - slot_was_set:
+    - person_ids: []
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - line_id: null
+  - intent: more_info
+    entities:
+    - gender: male
+  - action: action_more_info
+  - slot_was_set:
+    - person_ids:
+      - 1
+      - 3
+      - 7
+      - 9
+      - 11
+      - 13
+      - 15
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - line_id: null
+  - intent: more_info
+    entities:
+    - has_bag: bag
+    - has_hat: hat
+  - action: action_more_info
+  - slot_was_set:
+    - person_ids:
+      - 1
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - has_bag: bag
+  - slot_was_set:
+    - has_hat: hat
+  - slot_was_set:
+    - line_id: null
+  - intent: ask_person_trajectory
+  - action: action_show_trajectory
+
+- story: test_6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_individual_info
+    entities:
+    - individual_id: ID3
+  - action: action_get_individual_info
+  - intent: mood_great
+  - action: utter_affirm
+
+- story: test_7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_contest_informations
+  - action: utter_contest_info
+  - intent: ask_groups_count
+  - action: action_get_groups_count
+  - intent: mood_great
+  - action: utter_affirm
+
+- story: test_8
+  steps:
+  - intent: ask_participants_count
+  - action: action_get_participants_count
+  - intent: ask_groups_count
+  - action: action_get_groups_count
+  - intent: thank_response
+  - action: utter_thank_response
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_9
+  steps:
+  - intent: ask_highest_score_group
+  - action: action_highest_score_group
+  - slot_was_set:
+    - group_number: '1'
+  - intent: ask_highest_score_group
+  - action: action_highest_score_group
+  - slot_was_set:
+    - group_number: '1'
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_10
+  steps:
+  - intent: ask_contest_informations
+  - action: utter_contest_info
+  - intent: ask_organizers
+  - action: utter_organizers
+  - intent: ask_position_contest
+    entities:
+    - position: second
+  - slot_was_set:
+    - position: second
+  - action: action_get_position
+  - slot_was_set:
+    - group_number: '6'
+  - intent: ask_group_members
+  - action: action_get_group_members
+  - intent: thank_response
+  - action: utter_thank_response
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_11
+  steps:
+  - intent: ask_position_contest
+    entities:
+    - position: third
+    - group_number: '2025'
+  - slot_was_set:
+    - group_number: '2025'
+  - slot_was_set:
+    - position: third
+  - action: action_get_position
+  - slot_was_set:
+    - group_number: '8'
+  - intent: ask_group_score
+  - action: action_ask_group_score
+  - intent: ask_group_members
+  - action: action_get_group_members
+  - intent: thank_response
+  - action: utter_thank_response
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_12
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_individual_info
+  - action: action_get_individual_info
+  - intent: ask_individual_info
+    entities:
+    - individual_id: '5'
+  - action: action_get_individual_info
+
+- story: test_13
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_contest_informations
+  - action: utter_contest_info
+  - intent: ask_position_contest
+    entities:
+    - position: first
+  - slot_was_set:
+    - position: first
+  - action: action_get_position
+  - slot_was_set:
+    - group_number: '1'
+  - intent: thank_response
+  - action: utter_thank_response
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_14
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_individual_info
+    entities:
+    - individual_id: '5'
+  - action: action_get_individual_info
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_15
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: count_people
+    entities:
+    - gender: female
+    - gender: male
+  - action: action_count_people
+  - intent: count_people
+    entities:
+    - gender: female
+    - gender: male
+  - action: action_count_people
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - line_id: null
+  - intent: count_people_more_info
+    entities:
+    - has_hat: hat
+  - action: action_count_people_more_info
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: hat
+  - slot_was_set:
+    - line_id: null
+  - intent: count_people_more_info
+    entities:
+    - has_bag: bag
+  - action: action_count_people_more_info
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - has_bag: bag
+  - slot_was_set:
+    - has_hat: hat
+  - slot_was_set:
+    - line_id: null
+  - intent: ask_individual_info
+  - action: action_get_individual_info
+  - intent: thank_response
+  - action: utter_thank_response
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_16
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: query_high_scoring_groups
+    entities:
+    - f_score: '0.8'
+  - action: action_query_high_scoring_groups
+  - intent: query_high_scoring_groups
+    entities:
+    - f_score: '8'
+  - action: action_query_high_scoring_groups
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+
+- story: test_17
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_person
+    entities:
+    - gender: male
+  - action: action_search_person
+  - slot_was_set:
+    - person_ids:
+      - 1
+      - 3
+      - 7
+      - 9
+      - 11
+      - 13
+      - 15
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - line_id: null
+  - intent: more_info
+    entities:
+    - has_bag: bag
+  - action: action_more_info
+  - slot_was_set:
+    - person_ids:
+      - 1
+      - 9
+      - 11
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - has_bag: bag
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - line_id: null
+  - intent: ask_individual_info
+  - action: action_get_individual_info
+  - intent: more_info
+    entities:
+    - has_hat: hat
+  - action: action_more_info
+  - slot_was_set:
+    - person_ids:
+      - 1
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - has_bag: bag
+  - slot_was_set:
+    - has_hat: hat
+  - slot_was_set:
+    - line_id: null
+  - intent: thank_response
+  - action: utter_thank_response
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_reset_slots
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - has_bag: null
+  - slot_was_set:
+    - has_hat: null
+  - slot_was_set:
+    - person_ids: null
+  - slot_was_set:
+    - group_number: null
+  - slot_was_set:
+    - position: null
+  - slot_was_set:
+    - line_id: null
+  - slot_was_set:
+    - session_started_metadata: null

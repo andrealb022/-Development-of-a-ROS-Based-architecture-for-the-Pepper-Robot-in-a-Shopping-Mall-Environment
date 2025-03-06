@@ -1,0 +1,209 @@
+version: "3.1"
+
+rules:
+
+# DEFAULT
+
+- rule: Greet the user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Say goodbye to the user
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+    - action: action_reset_slots
+
+- rule: Respond to bot challenge
+  steps:
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+- rule: Affirm user intent
+  steps:
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: Deny user intent
+  steps:
+    - intent: deny
+    - action: utter_deny
+
+- rule: ask bot identity
+  steps: 
+  - intent: ask_bot_identity
+  - action: utter_ask_identity
+
+- rule: ask bot how are you
+  steps: 
+  - intent: ask_how_are_you
+  - action: utter_ask_how_are_you
+
+- rule: mood greet response 
+  steps:
+    - intent: mood_great
+    - action: utter_affirm
+
+- rule: mall hours
+  steps:
+    - intent: mall_hours
+    - action: utter_mall_hours
+# DATE AND TIME
+
+- rule: Provide the current time
+  steps:
+    - intent: ask_time
+    - action: action_show_time
+
+- rule: Respond to ask_date
+  steps:
+    - intent: ask_date
+    - action: action_ask_date
+
+# COUNTING PEOPLE
+- rule: Count all people in the mall
+  steps:
+    - intent: count_people
+    - action: action_count_people
+
+- rule: Count  people in the mall
+  steps:
+    - intent: count_people_more_info
+    - action: action_count_people_more_info
+
+
+- rule: Compare genders
+  steps:
+    - intent: compare_gender
+    - action: action_compare_gender
+
+# ATTRIBUTES
+- rule: Compare attributes
+  steps:
+    - intent: compare_attributes
+    - action: action_compare_attributes
+
+# SEARCH PEOPLE
+- rule: Searching people
+  steps:
+    - intent: search_person
+    - action: action_search_person
+
+- rule: Handle more info intent
+  steps:
+      - intent: more_info
+      - action: action_more_info
+
+- rule: Provide full trajectory
+  steps:
+    - intent: ask_person_trajectory
+    - action: action_show_trajectory
+
+# Person info
+- rule: Person info
+  steps:
+    - intent: ask_individual_info
+    - action: action_get_individual_info
+
+- rule: Person info attributes
+  steps:
+    - intent: get_individual_info_attributes
+    - action: action_get_individual_info_attributes
+
+# Contest AV
+# Richiesta partecipanti relative ad un determianto gruppo
+- rule: ask_contest_info
+  steps:
+    - intent: ask_contest_informations
+    - action: utter_contest_info
+# information about the contest days
+- rule: Respond to ask_competition_date
+  steps:
+  - intent: ask_competition_date
+  - action: utter_competition_date
+- rule: ask_group
+  steps:
+    - intent: ask_group_members
+    - action: action_get_group_members
+    
+# who organized the contest
+- rule: Respond to ask_organizers
+  steps:
+  - intent: ask_organizers
+  - action: utter_organizers
+
+# Richiesta score relative ad un determianto gruppo
+- rule: ask_group_score
+  steps:
+    - intent: ask_group_score
+    - action: action_ask_group_score
+
+- rule: ask_group_position
+  steps:
+    - intent: ask_position_contest
+    - action: action_get_position
+
+# Richiesta informazioni relativa ai partecipanti del contesto 
+- rule: Provide participants count
+  steps:
+    - intent: ask_participants_count
+    - action: action_get_participants_count
+
+# Richiesta informazioni conteggio gruppi che partecipano la contesto
+- rule: Provide groups count
+  steps:
+    - intent: ask_groups_count
+    - action: action_get_groups_count
+
+- rule: Provide the group with the lowest score
+  steps:
+    - intent: ask_lowest_score_group
+    - action: action_lowest_score_group
+
+- rule: Provide the group with the highest score
+  steps:
+    - intent: ask_highest_score_group
+    - action: action_highest_score_group
+
+# Config
+- rule: reset_slot
+  steps:
+    - intent: reset_slot
+    - action: action_reset_slots
+
+- rule: Handle fallback
+  steps:
+    - action: action_default_fallback
+    - action: utter_default
+
+- rule: Handle out-of-context questions
+  steps:
+    - intent: nlu_fallback
+    - action: utter_out_of_context
+
+# Face Analyze
+- rule: Face Analyze
+  steps:
+    - intent: analyze_emotions
+    - action: action_analyze_face
+
+# THANKS
+- rule: Handle thank_response
+  steps:
+    - intent: thank_response
+    - action: utter_thank_response
+    - action: action_reset_slots
+
+# request information on a certain position 
+- rule: Respond to ask_directions
+  steps:
+  - intent: ask_directions
+  - action: utter_directions
+
+# groups with score higher than a threeshold
+- rule: Respond to query_high_scoring_groups
+  steps:
+    - intent: query_high_scoring_groups
+    - action: action_query_high_scoring_groups
+

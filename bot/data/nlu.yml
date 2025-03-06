@@ -1,0 +1,825 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hi Pepper
+    - hi Peppa
+    - hello Pepper
+    - hello Peppa
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - can you help me?
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - can I ask you for some information?
+    - hello friend
+    - what's up?
+    - yo
+    - hi, can you assist me?
+    - hi pepper
+    - good morning pepper?
+    - hello pepper
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - goodbye Pepper
+    - goodbye Peppa
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see ya
+    - take care
+    - talk to you later
+    - have a great day
+    - goodbye pepper
+    - bye pepper
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - absolutely
+    - sure
+    - yup
+    - that's right
+    - yes please
+    - definitely
+    - okay
+    - agreed
+    - ok
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no way!
+    - nope
+    - absolutely not
+    - I don't agree
+    - nah
+    - not at all
+    - I disagree
+- intent: mood_great
+  examples: |
+    - fantastic
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - awesome
+    - really good
+    - everything's perfect
+    - feeling awesome
+    - I'm on top of the world
+    - couldn't be better
+    - fantastic!
+- intent: thank_response
+  examples: |
+    - thanks
+    - thank you
+    - thanks Pepper
+    - thanks Peppa
+    - thank you Pepper
+    - thank you Peppa
+    - thanks a lot
+    - thanks for the info
+    - thanks for the help
+    - thank you so much
+    - I appreciate it
+    - thanks!
+    - Many thanks
+    - Cheers
+    - Much appreciated
+    - thanks a ton
+    - Appreciate it
+    - Great, thanks
+    - Awesome, thank you
+    - thanks, that was helpful
+    - th
+    - fantastic! Thanks you
+    - thanks, goodbye
+    - thank you, goodbye pepper
+    - thank you pepper
+    - thank you pepper i found him
+- intent: bot_challenge
+  examples: |
+    - Hello Pepper, are you a robot?
+    - Hi Peppa, are you a bot?
+    - are you a robot?
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you an AI?
+    - what are you?
+    - are you real?
+    - you're not human, right?
+    - are you a chatbot?
+    - prove you're not a bot
+- intent: ask_bot_identity
+  examples: |
+    - Hello, what's your name?
+    - Hi what is your name?
+    - What's your name?
+    - Who are you?
+    - Can you tell me your name?
+    - May I know who you are?
+    - What should I call you?
+    - Tell me your name.
+    - Can you introduce yourself?
+    - Who am I talking to?
+    - What's your full name?
+    - Please introduce yourself.
+    - who are you?
+- intent: ask_how_are_you
+  examples: |
+    - Hello Pepper, how are you?
+    - Hi Peppa, how are you?
+    - Hello Peppa, how's it going?
+    - How are you?
+    - How are you doing?
+    - How's it going?
+    - Are you okay?
+    - What's up?
+    - How do you feel?
+    - Are you doing well?
+    - How are things?
+    - How are you feeling today?
+    - What's new?
+    - How's life treating you?
+    - How are you holding up?
+    - Everything good on your end?
+    - How's everything going?
+    - You doing okay?
+    - What's happening?
+    - Feeling good today?
+    - How's your day so far?
+    - What's going on with you?
+    - You all right?
+    - How are you this fine day?
+    - What's good?
+    - How's your mood?
+    - How are things with you?
+- intent: ask_time
+  examples: |
+    - Hello peppa, what time is it?
+    - Hi pepper, what time is it?
+    - What time is it?
+    - Can you tell me the time?
+    - Do you know the time now?
+    - what's the time now?
+    - tell me the time, please
+    - do you have the time?
+    - can you check the time for me?
+    - I need to know the current time
+    - what's the current time?
+    - what time is it now?
+    - what time is it?
+- intent: ask_date
+  examples: |
+    - Hello peppa, What day is it today?
+    - Hi pepper, What day is it today?
+    - What day is it today?
+    - Can you tell me today's date?
+    - What's the date today?
+    - Do you know what day it is?
+    - What is today's date?
+    - Can you check the date for me?
+    - Tell me what day it is.
+    - What's the day today?
+    - What's the calendar date today?
+- intent: mall_hours
+  examples: |
+    - What are the opening hours of the mall?
+    - Hi peppa, what are the opening hours of the mall?
+    - Hello pepper, what are the opening hours of the mall?
+    - Can you tell me when the mall opens?
+    - What time does the shopping center close?
+    - Could you let me know the mall's hours?
+    - When is the shopping mall open?
+    - What are the operating hours of the mall?
+    - When does the mall open?
+    - Do you know when the mall opens?
+    - What's the mall's schedule?
+    - What time does the mall start operating?
+    - what are the opening hours of the mall
+- intent: count_people
+  examples: |
+    - Hello peppa, how many people are in the mall?
+    - Hi Pepper, how many people are in the shopping mall?
+    - how many people are in the mall?
+    - How many people are in the shopping mall?
+    - How many person are in the shopping mall that have passed line [1](line_id)?
+    - How many [males](gender) are there in the mall?
+    - Can you count the [ladies](gender) in the shopping center?
+    - What is the total number of [women](gender) in the area?
+    - How many people have the [hat](has_hat)?
+    - How many people have the [bag](has_bag)?
+    - How many [girls](gender) with [bags](has_bag) and [hats](has_hat) are present?
+    - Can you estimate the number of [girls](gender) with [caps](has_hat) in the shopping area?
+    - How many [males](gender) with [hats](has_hat) and [bags](has_bag) are around?
+    - Are there any [boys](gender) in the mall carrying [backpacks](has_bag)?
+    - Count the [ladies](gender) with [bags](has_bag) in the mall.
+    - How many [boys](gender) carrying [backpacks](has_bag) and wearing [caps](has_hat)?
+    - How many people with [bags](has_bag) and [hats](has_hat) are present?
+    - Are there any people with [hats](has_hat) in the mall?
+    - What's the total count of individuals with [bags](has_bag)?
+    - How many people wearing [caps](has_hat) are around?
+    - How many [boys](gender) with [caps](has_hat) are in the mall?
+    - How many [boys](gender) are carrying [bags](has_bag) and wearing [caps](has_hat)?
+    - How many people have crossed line [1](line_id)?
+    - How many [males](gender) crossed line [2](line_id)?
+    - How many [females](gender) crossed line [3](line_id)?
+    - Can you count the [boys](gender) who crossed line [4](line_id)?
+    - How many people with [hats](has_hat) have crossed line [1](line_id)?
+    - How many people with [bags](has_bag) have passed line [2](line_id)?
+    - How many [girls](gender) with [bags](has_bag) crossed line [3](line_id)?
+    - What is the count of [ladies](gender) who crossed line [4](line_id)?
+    - How many people carrying [backpacks](has_bag) crossed line [1](line_id) and line [2](line_id)?
+    - Are there any [boys](gender) with [caps](has_hat) who passed line [3](line_id) and line [4](line_id)?
+    - How many people wearing [hats](has_hat) crossed line [2](line_id) and line [4](line_id)?
+    - how many [girls]{"entity": "gender", "value": "female"} are with [bag](has_bag)?
+    - how many [girls]{"entity": "gender", "value": "female"} with [hat](has_hat) that have crossed line [1](line_id)?
+    - How many people are [female](gender) with [bag](has_bag)
+    - What is the number of [girls]{"entity": "gender", "value": "female"} wearing a [hat](has_hat) who have crossed line [1](line_id)?
+    - how many [females]{"entity": "gender", "value": "female"} and [males]{"entity": "gender", "value": "male"} are in the mall?
+    - how many [females]{"entity": "gender", "value": "female"} and [males]{"entity": "gender", "value": "male"} are in the mall
+- intent: count_people_more_info
+  examples: |
+    - How many of them are [boys](gender)?
+    - How many of them are wearing a [hat](has_hat)?
+    - How many of them have a [bag](has_bag)?
+    - How many of them passed over line [2](line_id)?
+    - How many of them are [girls](gender) who crossed line [1](line_id)?
+    - How many of them with a [bag](has_bag) passed line [3](line_id)?
+    - How many of them have both a [bag](has_bag) and a [hat](has_hat)?
+    - How many of them with a [hat](has_hat) are [boys](gender)?
+    - How many of them are [females](gender) and have a [bag](has_bag)?
+    - How many of them with a [bag](has_bag) and [hat](has_hat) passed line [2](line_id)?
+    - and how many are [male](gender)?
+    - how many of them have a [hat](has_hat)?
+    - how many of them have a [bag](has_bag)
+- intent: compare_gender
+  examples: |
+    - Are there more [boys](gender) or [girls](gender)?
+    - Who is in the majority, [gentlemen](gender) or [ladies](gender)?
+    - Are [guys](gender) more numerous than [girls](gender)?
+    - Is the shopping mall dominated by [gentlemen](gender) or [ladies](gender)?
+    - Are there fewer [males](gender) than [females](gender)?
+    - Do you see more [guys](gender) or [women](gender)?
+    - Are there more [boys](gender) than [girls](gender)?
+    - Is the majority made up of [men](gender) or [women](gender)?
+    - Are [gentlemen](gender) more present than [ladies](gender)?
+    - Are there more [males](gender) than [females](gender)?
+    - Are [guys](gender) outnumbering [ladies](gender)?
+    - Who is more common here, [gentlemen](gender) or [women](gender)?
+    - Are [boys](gender) more visible than [girls](gender)?
+    - Are there fewer [men](gender) than [women](gender)?
+    - Are [guys](gender) dominating over [females](gender)?
+    - Who are in the majority, [boys](gender) or [girls](gender)?
+    - Do [gentlemen](gender) outnumber [ladies](gender)?
+    - Are there fewer [guys](gender) than [girls](gender)?
+    - There are more [guys](gender) or [girls](gender)?
+    - Are there more [male](gender) o [female](gender)?
+    - are there more [male](gender) o [female](gender)?
+    - Who are in greater number, [males]{"entity": "gender", "value": "male"} or [females]{"entity": "gender", "value": "female"}?
+- intent: compare_attributes
+  examples: |
+    - Are there more [girls](gender) with [caps](has_hat) or [backpacks](has_bag)?
+    - Are there more [boys](gender) with [backpack](has_bag) or [hat](has_hat)?
+    - Are there more [women](gender) with [hat](has_hat) or [backpack](has_bag)?
+    - Do more [male](gender) have [hats](has_hat) or [sacks](has_bag)?
+    - Is the number of [man](gender) with [caps](has_hat) greater than the number of [backpacks](has_bag)?
+    - Are there more [ladies](gender) with [hats](has_hat) or [sacks](has_bag)?
+    - Are there fewer [caps](has_hat) than [bags](has_bag)?
+    - Is the number of [caps](has_hat) greater than the number of [backpacks](has_bag)?
+    - Are there more [hats](has_hat) or [sacks](has_bag)?
+    - Do more people carry [bags](has_bag) or [caps](has_hat)?
+    - Are there fewer [hats](has_hat) than [sacks](has_bag)?
+    - Are [caps](has_hat) more common than [backpacks](has_bag)?
+    - Are there more [hats](has_hat) or [backpacks](has_bag)?
+    - Do fewer people carry [caps](has_hat) than [bags](has_bag)?
+    - Is the count of [hats](has_hat) higher than [sacks](has_bag)?
+    - are there more [male](gender) with [bag](has_bag) o with [hat](has_hat)?
+    - Do more [males]{"entity": "gender", "value": "male"} have [bags]{"entity": "has_bag", "value": "bag"} or [hats]{"entity": "has_hat", "value": "hat"}?
+- intent: search_person
+  examples: |
+    - Hello Pepper, i need your help to find a Person
+    - Hi Peppa, i am searching for a person.
+    - Who crossed line [3](line_id)?
+    - I lost a children, can you find [him](gender)?
+    - I lost a person, help me to find [her](gender)
+    - Can you find a [man](gender) with a [hat](has_hat) who passed line [2](line_id)?
+    - I need to know which [woman](gender) carrying a [bag](has_bag) crossed line [5](line_id).
+    - Show me the [boy](gender) with a [cap](has_hat) who crossed line [4](line_id).
+    - Who has passed line [6](line_id) carrying a [backpack](has_bag)?
+    - Could you tell me if a [girl](gender) wearing a [hat](has_hat) crossed line [1](line_id)?
+    - Let me know if any [man](gender) crossed line [7](line_id).
+    - Which [female](gender) with a [bag](has_bag) crossed line [8](line_id)?
+    - Tell me the names of those who passed line [9](line_id) and have a [cap](has_hat).
+    - Can you find a [woman](gender) with a [hat](has_hat) who crossed line [10](line_id)?
+    - I'm looking for a [male](gender) wearing a [hat](has_hat) and carrying a [bag](has_bag) who passed line [11](line_id).
+    - Could you locate a [boy](gender) carrying a [backpack](has_bag) who crossed line [12](line_id)?
+    - Do you know who passed line [13](line_id) wearing a [cap](has_hat)?
+    - Provide the list of [women](gender) who passed line [14](line_id).
+    - What is the name of the person who crossed line [15](line_id) wearing a [hat](has_hat)?
+    - I am searching for a [man](gender) carrying a [bag](has_bag) who crossed line [4](line_id).
+    - Help me locate someone who passed line [3](line_id).
+    - Who crossed line [7](line_id) and is carrying a [backpack](has_bag)?
+    - Tell me if a [girl](gender) wearing a [cap](has_hat) passed line [9](line_id).
+    - I am looking for a [man](gender) who passed line [10](line_id).
+    - Can you find someone carrying a [bag](has_bag) who passed line [8](line_id)?
+    - Who passed line [6](line_id) wearing a [hat](has_hat)?
+    - Let me know if any [woman](gender) passed line [1](line_id) carrying a [backpack](has_bag).
+    - Could you tell me if a [boy](gender) wearing a [hat](has_hat) passed line [11](line_id)?
+    - I need to know who crossed line [5](line_id).
+    - Show me who crossed line [4](line_id) carrying a [bag](has_bag).
+    - I am looking for someone with a [hat](has_hat) who crossed line [3](line_id).
+    - Can you tell me who crossed line [7](line_id) with a [cap](has_hat)?
+    - I need help finding someone who passed line [2](line_id).
+    - Who crossed line [12](line_id)?
+    - Where is the [man](gender) who passed line [14](line_id)?
+    - Help me find a [woman](gender) with a [bag](has_bag) who crossed line [13](line_id).
+    - Can you locate a [girl](gender) wearing a [cap](has_hat) who crossed line [15](line_id)?
+    - I lost my [son](gender), help me
+    - I lost my children, find him
+    - Can you search my friend
+    - I lost my [grandmother](gender), can you help me to find [her](gender)?
+    - I am looking for a person.
+    - I am looking for someone who crossed line [2](line_id)
+    - I am in search of someone.
+    - i lost my [grandfather]{"entity": "gender", "value": "male"} can you help me to find him
+- intent: more_info
+  examples: |
+    - He is a [male](gender).
+    - She is a [female](gender).
+    - He has a [hat](has_hat).
+    - She has a [bag](has_bag).
+    - He has a [hat](has_hat) and [bag](has_bag).
+    - She is a [female](gender) and has a [hat](has_hat).
+    - He is a [male](gender) with a [bag](has_bag).
+    - He crossed line [1](line_id).
+    - She crossed line [2](line_id).
+    - He is wearing a [hat](has_hat) and crossed line [3](line_id).
+    - She is carrying a [bag](has_bag) and crossed line [4](line_id).
+    - He is a [male](gender) with a [hat](has_hat) and crossed line [1](line_id).
+    - She is a [female](gender) carrying a [bag](has_bag) and crossed line [2](line_id).
+    - He is a [male](gender), wearing a [hat](has_hat), and carrying a [bag](has_bag).
+    - She is a [female](gender) with a [hat](has_hat) and crossed lines [3](line_id) and [4](line_id).
+    - He has a [bag](has_bag) and crossed line [2](line_id).
+    - She is a [female](gender), carrying a [bag](has_bag), and crossed line [1](line_id).
+    - He is wearing a [hat](has_hat), carrying a [bag](has_bag), and crossed line [4](line_id).
+    - She crossed lines [1](line_id) and [3](line_id).
+    - He is a [male](gender) who crossed lines [2](line_id) and [4](line_id).
+    - he is a [boy]{"entity": "gender", "value": "male"}
+    - he has a [bag](has_bag) and [hat](has_hat)
+    - he is carying a [bag](has_bag)
+    - he is wearing a [hat](has_hat)
+- intent: ask_person_trajectory
+  examples: |
+    - I cannot see him. Did you see him in any other place?
+    - have you seen him in another place?
+    - Where else did you see him?
+    - Where else did you see them?
+    - Where else did you see her?
+    - Can you tell me his trajectory?
+    - Show me where he has been.
+    - Where else has he been?
+    - Did you notice him in other places?
+    - What is his full trajectory?
+    - Where has he been before?
+    - Can you show me his path in the shopping mall?
+    - What route did he take in the shopping mall?
+    - Where did he go in the shopping mall?
+    - Could you show me her trajectory?
+    - What path has she followed in the mall?
+    - Can you describe his journey through the shopping center?
+    - What places has he visited in the mall?
+    - Can you tell me where he went in the shopping mall?
+    - What path did she take in the shopping mall?
+    - Where has she walked in the shopping center?
+    - tell my other positions of that person
+    - He’s not here. Did you spot him anywhere else?
+- intent: ask_individual_info
+  examples: |
+    - Tell me more informations about this people.
+    - Give me more informations about them
+    - provide me more informations about him
+    - tell me more informations about her
+    - what are the details about her
+    - I would like to know more details about them
+    - What can you tell me about individual with id [6](individual_id)?
+    - Give me the details for individual [id7](individual_id).
+    - tell me the details for individual [7](individual_id).
+    - I would like information about [8](individual_id).
+    - I would like information about [id8](individual_id).
+    - Can you show me the profile of [9](individual_id)?
+    - Tell me everything you know about [id11](individual_id).
+    - Who is the person identified as [12](individual_id)?
+    - Provide the details of the person with [12](individual_id) id.
+    - Can you list the details of [id12](individual_id)?
+    - I want to see the information for individual [17](individual_id).
+    - Tell me about the profile of [22](individual_id).
+    - What are the details for [id22](individual_id)?
+    - Please provide me with information about individual [21](individual_id).
+    - tell me more information about them
+    - Give me additional information about them
+    - Can you provide details about the person identified as [id3](individual_id)?
+    - can you tell me the information about the individual with id [5](individual_id)
+    - can you tell me information about the indvidual [5](individual_id)
+    - can you give me more informations about them
+
+- intent: get_individual_info_attributes
+  examples: |
+    - Tell me if the individual with [id5](individual_id) is wearing a [hat](has_hat).
+    - Is the person with [id6](individual_id) carrying a [bag](has_bag)?
+    - Is the user with [id10](individual_id) [female](gender)?
+    - Has the user with [id7](individual_id) crossed line [1](line_id)?
+    - Does the user with [id7](individual_id) have a [hat](has_hat)?
+    - Is the individual with [id8](individual_id) [male](gender)?
+    - Tell me if the individual with [id4](individual_id) has crossed line [2](line_id).
+    - Is the user with [id9](individual_id) carrying a [bag](has_bag) and wearing a [hat](has_hat)?
+    - Can you confirm if the user with [id2](individual_id) is [female](gender)?
+    - Has the person with [id1](individual_id) crossed line [3](line_id)?
+    - Is the individual with [id11](individual_id) [male](gender)?
+    - Does the user with [id12](individual_id) wear a [hat](has_hat)?
+    - Is the individual with [id14](individual_id) carrying a [bag](has_bag)?
+    - Has the user with [id15](individual_id) crossed line [4](line_id)?
+    - Is the person with [id15](individual_id) crossed line [2](line_id)?
+
+- intent: ask_contest_informations
+  examples: |
+    - Can you give me some information about the artificial vision contest?
+    - Hello Peppa, can you give me some information about the artificial vision contest?
+    - Tell me me some information about the competition?
+    - Tell me informations about the mivia contest
+    - Tell me informations about the contest
+    - can you give me informations about the contest
+    - What are the rules of the competition?
+    - When is the competition scheduled?
+    - Are there any specific requirements to join the competition?
+    - What is the theme of the mivia contest this year?
+    - Where will the competition take place?
+    - What is the format of the competition?
+    - Can you provide details on the contest?
+    - Do you know the mivia contest?
+    - Can you share some information regarding the contest?
+    - Goodmorning Peppe, what do you know about the contest?
+    - what can you tell me about the artificial vision contest?
+- intent: ask_competition_date
+  examples: |
+    - When was the competition held?
+    - What day was the competition?
+    - Can you tell me the date of the competition?
+    - On which day did the competition take place?
+    - When did the competition happen?
+    - What was the date of the competition?
+    - Tell me the date of the competition.
+    - When exactly was the competition?
+    - On what date was the competition?
+- intent: ask_organizers
+  examples: |
+    - Who organized the competition?
+    - Can you tell me who organized the contest?
+    - Who were the organizers of the competition?
+    - Who set up the contest?
+    - Who is responsible for organizing the competition?
+    - Who planned the contest?
+    - Who are the competition organizers?
+    - Who made the competition happen?
+    - Who's behind the organization of the contest?
+    - Tell me about the organizers of the competition.
+    - Can you tell me who put together the contest?
+- intent: ask_group_members
+  examples: |
+    - Who are the members of group [1](group_number)?
+    - Show me the participants of group [6](group_number).
+    - Show me the partecipants of group [6](group_number).
+    - Who are the components of that group
+    - What is the composition of team [10](group_number)?
+    - Can you list the members of group [4](group_number)?
+    - Who is in the team [8](group_number)?
+    - I would like to know about the participants of group [12](group_number).
+    - Tell me who is in group [3](group_number).
+    - Tell me the partecipans of group [5](group_number)
+    - Tell me the members of group [5](group_number)
+    - And tell me the members of that group
+    - who are the members of that group
+    - who are the components
+    - Who is in that team?
+    - Who is in that group?
+    - Do you know who is in that group?
+    - Can you tell me who belongs to that group?
+- intent: ask_group_score
+  examples: |
+    - What is the score of group [1](group_number)?
+    - Can you tell me the score of group [6](group_number)?
+    - What is the F1 score of team [10](group_number)?
+    - Show me the score of group [4](group_number).
+    - What was the score reached?
+    - How well did group [8](group_number) perform?
+    - I'd like to know the F1 score of group [12](group_number).
+    - Tell me the performance of group [3](group_number).
+    - What is the final score of group [5](group_number)?
+    - What is the score achieved by group [4](group_number)?
+    - Can you tell me the performance score of group [7](group_number)?
+    - What is the result of group [2](group_number)?
+    - Show me the performance of team [9](group_number).
+    - How many points did group [11](group_number) achieve?
+    - What was the score for group [13](group_number)?
+    - Tell me the F1 score for team [15](group_number).
+    - I'd like to know the points for group [14](group_number).
+    - What is the final result of group [1](group_number)?
+    - And tell me the score achieved of that group
+    - what is the score reached of that group?
+    - tell me their score
+    - Can you tell me the score of that group?
+    - What was their score?
+- intent: ask_position_contest
+  examples: |
+    - Who is the group [winner](position) of the competition?
+    - Who is the group in position [1](position) of the competition?
+    - Who are the [winners](position) of the competition?
+    - Who is the group in position [2](position) of the MIVIA competition?
+    - Who [won](position) the Mivia competition?
+    - Tell me the ranking of the [eleventh](position) group.
+    - Who came in the [second](position) position in the competition?
+    - Which group is in [thirteenth](position) place?
+    - Which group is in position [eleven](position)?
+    - What is the group ranked [seventh](position) position?
+    - Can you tell me about the [fourth](position) place group?
+    - Which group is in position [ten](position)?
+    - I'd like to know who holds the [sixth](position) position.
+    - I'd like to know who holds the [last](position) position.
+    - What is the group ranked [last](position) position?
+    - Which group is ranked [eleventh](position)?
+    - Who came in the [first](position) position?
+    - Who is the group in the [eleventh](position) position.
+    - Who is in the [third](position) place?
+    - Tell me the group in position [3](position)?
+    - Tell me the ranking of the [fourth](position) group.
+    - Which group came in [eighth](position)?
+    - Which group is in position [seven](position)?
+    - Can you tell me about the [tenth](position) group?
+    - I'd like to know the group in [fifth](position) position.
+    - What about the [fourteenth](position) group?
+    - Who is the group in [twelfth](position)?
+    - Tell me about the [thirteenth](position) group.
+    - Which group finished in [ninth](position) place?
+    - who came in position [10](position)?
+    - Who came in [seventh](position)?
+    - Who [won](position) the first prize?
+    - Who is in the [last](position)?
+    - Which group came [last](position)?
+    - Who is in the [second](position) place?
+    - Which group is in position [nine](position)?
+    - Who is ranked [sixth](position)?
+    - Can you tell me who took [second](position) place in the competition?
+    - Hello Pepper, who was in the [third](position) position in the 2025 competition?
+    - which group [won]{"entity": "position", "value": "first"} the competition?
+- intent: ask_participants_count
+  examples: |
+    - how many person partecipated to the contest?
+    - how many people partecipated to the contest?
+    - How many participants are in the contest?
+    - How many people are in the competition?
+    - What is the total number of participants in the contest?
+    - Can you tell me how many people are in the competition?
+    - I'd like to know the number of participants in the contest.
+    - What is the size of the contest?
+    - How many teams are participating in the contest?
+    - Could you provide the participant count for the contest?
+    - Tell me the total participants in the competition.
+    - Hi Pepper, can you tell me how many people are participating in the Mivia competition?
+- intent: ask_groups_count
+  examples: |
+    - How many groups participated in the contest?
+    - How many groups joins in the competition?
+    - Tell me the total number of groups.
+    - How many groups were there in the contest?
+    - What is the total count of groups?
+    - Can you tell me how many groups took part in the contest?
+    - How many teams participated in the event?
+    - What is the total number of groups in the competition?
+    - How many groups joined the contest?
+    - Can you tell me how many groups joined the contest?
+    - And what's the total number of groups that took part in the contest?
+- intent: ask_lowest_score_group
+  examples: |
+    - Which group has the lowest score?
+    - Who is the team with the lowest points?
+    - Can you tell me which group scored the least?
+    - Who performed the worst among the groups?
+    - Which team achieved the lowest score?
+    - I'd like to know the group with the fewest points.
+- intent: ask_highest_score_group
+  examples: |
+    - Which group has the highest score?
+    - Which group has the top score?
+    - Hi Pepper, which team achieved the top score?
+    - Who is the team with the most points?
+    - Can you tell me which group scored the highest?
+    - Who performed the best among the groups?
+    - Which team achieved the best score?
+    - I'd like to know the group with the highest points.
+    - Hello Pepper, which group has the highest score?
+- intent: reset_slot
+  examples: |
+    - reset slots
+- intent: analyze_emotions
+  examples: |
+    - Analyze my face
+    - Can you detect emotions from my face?
+    - Analyze the emotions based on my facial expressions
+    - Can you analyze my emotions?
+    - What emotions do you see on my face?
+    - Detect the emotions in my face
+    - Can you tell how I feel by looking at my face?
+    - analyze the emotions on my face
+    - can you determine my mood from my facial expressions?
+    - tell me what emotions you can identify on my face
+    - read the emotions on my face
+    - can you understand my emotions from my face?
+    - analyze my facial expressions to find emotions
+    - detect the feelings on my face
+    - what do my facial expressions tell you about my emotions?
+    - what is my emotion?
+- intent: ask_directions
+  examples: |
+    - How do I reach line [3](line_id)?
+    - Can you give me directions to line [1](line_id)?
+    - Where is line [2](line_id)?
+    - How can I get to line [4](line_id)?
+    - Can you help me find line [5](line_id)?
+    - Directions to line [6](line_id), please.
+    - How do I get to line [3](line_id)?
+    - Tell me how to reach line [1](line_id).
+    - I need directions to line [2](line_id).
+    - How to find line [4](line_id)?
+    - Where can I find line [5](line_id)?
+    - Please guide me to line [6](line_id).
+- intent: query_high_scoring_groups
+  examples: |
+    - How many groups achieved a score higher than [0.7](f_score)?
+    - Which groups have a score greater than [0.8](f_score)?
+    - Can you tell me how many groups scored above [0.3](f_score)?
+    - List the groups with a score higher than [0.9](f_score).
+    - Are there any groups with a score over [0.6](f_score)?
+    - Which groups achieved an f-score above [0.4](f_score)?
+    - How many teams scored more than [0.2](f_score)?
+    - Could you tell me the groups that scored higher than [0.1](f_score)?
+    - What groups have a score greater than [0.5](f_score)?
+    - Are there groups with an f-score above [0.0](f_score)?
+    - How many groups scored lower than [0.7](f_score)?
+    - Which groups have a score less than [0.6](f_score)?
+    - Can you tell me how many groups scored below [0.5](f_score)?
+    - List the groups with a score lower than [0.4](f_score).
+    - Are there any groups with a score under [0.3](f_score)?
+    - Which groups achieved an f-score below [0.2](f_score)?
+    - How many teams scored less than [0.1](f_score)?
+    - Could you tell me the groups that scored lower than [0.9](f_score)?
+    - What groups have a score below [0.8](f_score)?
+    - Are there groups with an f-score lower than [0.0](f_score)?
+    - how many groups have a score higher then [0.8](f_score)?
+- synonym: female
+  examples: |
+    - girls
+    - females
+    - woman
+    - women
+    - girl
+    - lady
+    - sister
+    - mom
+    - mother
+    - daughter
+    - grandma
+    - grandmother
+    - feminine
+    - ladies
+    - her
+    - girlfriend
+- synonym: male
+  examples: |
+    - males
+    - boy
+    - men
+    - man
+    - boys
+    - guy
+    - gentleman
+    - brother
+    - dad
+    - father
+    - son
+    - grandpa
+    - grandfather
+    - masculine
+    - him
+    - boyfriend
+- synonym: bag
+  examples: |
+    - bags
+    - backpack
+    - backpacks
+    - sack
+    - sacks
+    - handbag
+    - handbags
+- synonym: hat
+  examples: |
+    - hats
+    - cap
+    - caps
+- synonym: first
+  examples: |
+    - won
+    - winner
+    - winners
+    - leaders
+    - win
+    - winning 
+- synonym: fourteenth
+  examples: |
+    - lasts
+- lookup: gender
+  examples: |
+    - male
+    - males
+    - man
+    - boy
+    - boys
+    - guy
+    - gentleman
+    - brother
+    - dad
+    - father
+    - son
+    - grandpa
+    - grandfather
+    - masculine
+    - female
+    - females
+    - woman
+    - women
+    - girl
+    - girls
+    - lady
+    - ladies
+    - sister
+    - mom
+    - mother
+    - daughter
+    - grandma
+    - grandmother
+    - feminine
+    - boyfriend
+    - girlfriend
+- lookup: has_bag
+  examples: |
+    - bag
+    - bags
+    - backpack
+    - backpacks
+    - sack
+    - sacks
+    - handbag
+    - handbags
+- lookup: has_hat
+  examples: |
+    - hat
+    - hats
+    - cap
+    - caps
