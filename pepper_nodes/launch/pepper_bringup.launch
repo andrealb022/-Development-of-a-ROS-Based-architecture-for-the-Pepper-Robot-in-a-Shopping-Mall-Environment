@@ -1,0 +1,10 @@
+<launch>
+  <arg name="nao_ip" default="$(optenv NAO_IP 10.0.1.207)" />
+  <arg name="nao_port" default="$(optenv NAO_PORT 9559)" />
+  <param name="nao_ip" type="string" value="$(arg nao_ip)"/>
+  <param name="nao_port" type="string" value="$(arg nao_port)"/>
+
+  <node pkg="pepper_nodes" type="text2speech_node.py" name="text2speech" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+  <node pkg="pepper_nodes" type="people_perception_node.py" name="people_perception" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+
+</launch>
