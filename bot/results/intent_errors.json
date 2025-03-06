@@ -1,0 +1,682 @@
+[
+  {
+    "text": "can you help me?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_directions",
+      "confidence": 0.5222840905189514
+    }
+  },
+  {
+    "text": "what's up?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_how_are_you",
+      "confidence": 0.9393305778503418
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5294564962387085
+    }
+  },
+  {
+    "text": "n",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3506195545196533
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3506195545196533
+    }
+  },
+  {
+    "text": "I disagree",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thank_response",
+      "confidence": 0.2878836691379547
+    }
+  },
+  {
+    "text": "fantastic",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "thank_response",
+      "confidence": 0.726203978061676
+    }
+  },
+  {
+    "text": "really good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6188006401062012
+    }
+  },
+  {
+    "text": "fantastic!",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "thank_response",
+      "confidence": 0.726203978061676
+    }
+  },
+  {
+    "text": "May I know who you are?",
+    "intent": "ask_bot_identity",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.35085350275039673
+    }
+  },
+  {
+    "text": "Everything good on your end?",
+    "intent": "ask_how_are_you",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.18730708956718445
+    }
+  },
+  {
+    "text": "How's your day so far?",
+    "intent": "ask_how_are_you",
+    "intent_prediction": {
+      "name": "ask_organizers",
+      "confidence": 0.26243269443511963
+    }
+  },
+  {
+    "text": "can you check the time for me?",
+    "intent": "ask_time",
+    "intent_prediction": {
+      "name": "ask_date",
+      "confidence": 0.4098520278930664
+    }
+  },
+  {
+    "text": "Provide the list of women who passed line 14.",
+    "intent": "search_person",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.5072168707847595
+    }
+  },
+  {
+    "text": "tell my other positions of that person",
+    "intent": "ask_person_trajectory",
+    "intent_prediction": {
+      "name": "ask_group_members",
+      "confidence": 0.45803239941596985
+    }
+  },
+  {
+    "text": "can you give me informations about the contest",
+    "intent": "ask_contest_informations",
+    "intent_prediction": {
+      "name": "ask_individual_info",
+      "confidence": 0.5803065896034241
+    }
+  },
+  {
+    "text": "What are the rules of the competition?",
+    "intent": "ask_contest_informations",
+    "intent_prediction": {
+      "name": "ask_participants_count",
+      "confidence": 0.35620954632759094
+    }
+  },
+  {
+    "text": "Tell me the date of the competition.",
+    "intent": "ask_competition_date",
+    "intent_prediction": {
+      "name": "ask_date",
+      "confidence": 0.3398887515068054
+    }
+  },
+  {
+    "text": "Could you provide the participant count for the contest?",
+    "intent": "ask_participants_count",
+    "intent_prediction": {
+      "name": "ask_contest_informations",
+      "confidence": 0.691597044467926
+    }
+  },
+  {
+    "text": "Can you tell me which group scored the least?",
+    "intent": "ask_lowest_score_group",
+    "intent_prediction": {
+      "name": "ask_highest_score_group",
+      "confidence": 0.35750865936279297
+    }
+  },
+  {
+    "text": "Which team achieved the lowest score?",
+    "intent": "ask_lowest_score_group",
+    "intent_prediction": {
+      "name": "ask_highest_score_group",
+      "confidence": 0.5179004073143005
+    }
+  },
+  {
+    "text": "have a great day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8690648674964905
+    }
+  },
+  {
+    "text": "absolutely not",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8830083012580872
+    }
+  },
+  {
+    "text": "what are you?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "ask_how_are_you",
+      "confidence": 0.288250595331192
+    }
+  },
+  {
+    "text": "Who am I talking to?",
+    "intent": "ask_bot_identity",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.2945452332496643
+    }
+  },
+  {
+    "text": "Feeling good today?",
+    "intent": "ask_how_are_you",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5525330305099487
+    }
+  },
+  {
+    "text": "how many girls are with bag?",
+    "intent": "count_people",
+    "intent_prediction": {
+      "name": "count_people_more_info",
+      "confidence": 0.6403332352638245
+    }
+  },
+  {
+    "text": "Can you provide details on the contest?",
+    "intent": "ask_contest_informations",
+    "intent_prediction": {
+      "name": "ask_individual_info",
+      "confidence": 0.8263023495674133
+    }
+  },
+  {
+    "text": "Can you tell me the date of the competition?",
+    "intent": "ask_competition_date",
+    "intent_prediction": {
+      "name": "ask_contest_informations",
+      "confidence": 0.4521544873714447
+    }
+  },
+  {
+    "text": "When did the competition happen?",
+    "intent": "ask_competition_date",
+    "intent_prediction": {
+      "name": "ask_organizers",
+      "confidence": 0.4141484797000885
+    }
+  },
+  {
+    "text": "I would like to know about the participants of group 12.",
+    "intent": "ask_group_members",
+    "intent_prediction": {
+      "name": "ask_individual_info",
+      "confidence": 0.624666690826416
+    }
+  },
+  {
+    "text": "Who is the group winner of the competition?",
+    "intent": "ask_position_contest",
+    "intent_prediction": {
+      "name": "ask_group_members",
+      "confidence": 0.5619482398033142
+    }
+  },
+  {
+    "text": "I'd like to know the group in fifth.",
+    "intent": "ask_position_contest",
+    "intent_prediction": {
+      "name": "ask_group_score",
+      "confidence": 0.3115423321723938
+    }
+  },
+  {
+    "text": "What is the size of the contest?",
+    "intent": "ask_participants_count",
+    "intent_prediction": {
+      "name": "ask_contest_informations",
+      "confidence": 0.8137110471725464
+    }
+  },
+  {
+    "text": "Can you help me find line 5?",
+    "intent": "ask_directions",
+    "intent_prediction": {
+      "name": "search_person",
+      "confidence": 0.5401749014854431
+    }
+  },
+  {
+    "text": "moin",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5280895233154297
+    }
+  },
+  {
+    "text": "goodevening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5280895233154297
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5280895233154297
+    }
+  },
+  {
+    "text": "y",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5280895233154297
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8981184959411621
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5280895233154297
+    }
+  },
+  {
+    "text": "Cheers",
+    "intent": "thank_response",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.25485268235206604
+    }
+  },
+  {
+    "text": "Can you check the date for me?",
+    "intent": "ask_date",
+    "intent_prediction": {
+      "name": "ask_time",
+      "confidence": 0.6898321509361267
+    }
+  },
+  {
+    "text": "Can you search my friend",
+    "intent": "search_person",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5075920224189758
+    }
+  },
+  {
+    "text": "When is the competition scheduled?",
+    "intent": "ask_contest_informations",
+    "intent_prediction": {
+      "name": "ask_competition_date",
+      "confidence": 0.6661533713340759
+    }
+  },
+  {
+    "text": "On which day did the competition take place?",
+    "intent": "ask_competition_date",
+    "intent_prediction": {
+      "name": "ask_contest_informations",
+      "confidence": 0.633476734161377
+    }
+  },
+  {
+    "text": "Who is the team with the most points?",
+    "intent": "ask_highest_score_group",
+    "intent_prediction": {
+      "name": "ask_lowest_score_group",
+      "confidence": 0.7311119437217712
+    }
+  },
+  {
+    "text": "Can you tell me which group scored the highest?",
+    "intent": "ask_highest_score_group",
+    "intent_prediction": {
+      "name": "ask_lowest_score_group",
+      "confidence": 0.49853867292404175
+    }
+  },
+  {
+    "text": "can I ask you for some information?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_contest_informations",
+      "confidence": 0.827138364315033
+    }
+  },
+  {
+    "text": "yo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6250523328781128
+    }
+  },
+  {
+    "text": "okay",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "ask_how_are_you",
+      "confidence": 0.5502327084541321
+    }
+  },
+  {
+    "text": "ok",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6250523328781128
+    }
+  },
+  {
+    "text": "feeling like a king",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "ask_how_are_you",
+      "confidence": 0.16082601249217987
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "ask_how_are_you",
+      "confidence": 0.24013587832450867
+    }
+  },
+  {
+    "text": "I'm on top of the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "search_person",
+      "confidence": 0.21326754987239838
+    }
+  },
+  {
+    "text": "couldn't be better",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9131855368614197
+    }
+  },
+  {
+    "text": "What's up?",
+    "intent": "ask_how_are_you",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8805574774742126
+    }
+  },
+  {
+    "text": "and how many are male?",
+    "intent": "count_people_more_info",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.49017083644866943
+    }
+  },
+  {
+    "text": "are there more male with bag o with hat?",
+    "intent": "compare_attributes",
+    "intent_prediction": {
+      "name": "compare_gender",
+      "confidence": 0.43994060158729553
+    }
+  },
+  {
+    "text": "Which female with a bag crossed line 8?",
+    "intent": "search_person",
+    "intent_prediction": {
+      "name": "more_info",
+      "confidence": 0.7593530416488647
+    }
+  },
+  {
+    "text": "Who is registered as 16?",
+    "intent": "ask_individual_info",
+    "intent_prediction": {
+      "name": "ask_group_members",
+      "confidence": 0.4351935088634491
+    }
+  },
+  {
+    "text": "Who is registered as ID10?",
+    "intent": "ask_individual_info",
+    "intent_prediction": {
+      "name": "ask_group_members",
+      "confidence": 0.3730911910533905
+    }
+  },
+  {
+    "text": "Are there any specific requirements to join the competition?",
+    "intent": "ask_contest_informations",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.805161714553833
+    }
+  },
+  {
+    "text": "Where will the competition take place?",
+    "intent": "ask_contest_informations",
+    "intent_prediction": {
+      "name": "ask_person_trajectory",
+      "confidence": 0.42100289463996887
+    }
+  },
+  {
+    "text": "Who is responsible for organizing the competition?",
+    "intent": "ask_organizers",
+    "intent_prediction": {
+      "name": "ask_position_contest",
+      "confidence": 0.9026760458946228
+    }
+  },
+  {
+    "text": "How many people are in the competition?",
+    "intent": "ask_participants_count",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.674680233001709
+    }
+  },
+  {
+    "text": "Who performed the worst among the groups?",
+    "intent": "ask_lowest_score_group",
+    "intent_prediction": {
+      "name": "ask_groups_count",
+      "confidence": 0.5395265221595764
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.507436990737915
+    }
+  },
+  {
+    "text": "goodmorning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.751278817653656
+    }
+  },
+  {
+    "text": "hello friend",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5570406317710876
+    }
+  },
+  {
+    "text": "yup",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5776124000549316
+    }
+  },
+  {
+    "text": "agreed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5776124000549316
+    }
+  },
+  {
+    "text": "nah",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5776124000549316
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.8753566145896912
+    }
+  },
+  {
+    "text": "everything's perfect",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "ask_how_are_you",
+      "confidence": 0.32713568210601807
+    }
+  },
+  {
+    "text": "th",
+    "intent": "thank_response",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5776124000549316
+    }
+  },
+  {
+    "text": "thanks, goodbye",
+    "intent": "thank_response",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6604440808296204
+    }
+  },
+  {
+    "text": "What should I call you?",
+    "intent": "ask_bot_identity",
+    "intent_prediction": {
+      "name": "ask_how_are_you",
+      "confidence": 0.3355943560600281
+    }
+  },
+  {
+    "text": "Are you okay?",
+    "intent": "ask_how_are_you",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.4006161093711853
+    }
+  },
+  {
+    "text": "How many of them are girls who crossed line 1?",
+    "intent": "count_people_more_info",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.8652001619338989
+    }
+  },
+  {
+    "text": "Tell me everything you know about id11.",
+    "intent": "ask_individual_info",
+    "intent_prediction": {
+      "name": "ask_how_are_you",
+      "confidence": 0.22472645342350006
+    }
+  },
+  {
+    "text": "Tell me me some information about the competition?",
+    "intent": "ask_contest_informations",
+    "intent_prediction": {
+      "name": "ask_individual_info",
+      "confidence": 0.5203734040260315
+    }
+  },
+  {
+    "text": "Show me the partecipants of group 6.",
+    "intent": "ask_group_members",
+    "intent_prediction": {
+      "name": "ask_group_score",
+      "confidence": 0.485848069190979
+    }
+  },
+  {
+    "text": "Who are the winners of the competition?",
+    "intent": "ask_position_contest",
+    "intent_prediction": {
+      "name": "ask_organizers",
+      "confidence": 0.4596911668777466
+    }
+  },
+  {
+    "text": "I'd like to know the group with the fewest points.",
+    "intent": "ask_lowest_score_group",
+    "intent_prediction": {
+      "name": "ask_highest_score_group",
+      "confidence": 0.3706935942173004
+    }
+  }
+]

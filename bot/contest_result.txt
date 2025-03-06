@@ -1,0 +1,116 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "gender": "male",
+      "hat": true,
+      "bag": true,
+      "trajectory": [1, 2, 3, 4]
+    },
+    {
+      "id": 2,
+      "gender": "female",
+      "hat": false,
+      "bag": true,
+      "trajectory": [4, 1, 3, 1, 2]
+    },
+    {
+      "id": 3,
+      "gender": "male",
+      "hat": true,
+      "bag": false,
+      "trajectory": [2, 3]
+    },
+    {
+      "id": 4,
+      "gender": "female",
+      "hat": true,
+      "bag": false,
+      "trajectory": [1, 4]
+    },
+    {
+      "id": 5,
+      "gender": "female",
+      "hat": true,
+      "bag": true,
+      "trajectory": [3]
+    },
+    {
+      "id": 6,
+      "gender": "female",
+      "hat": false,
+      "bag": true,
+      "trajectory": [2, 4]
+    },
+    {
+      "id": 7,
+      "gender": "male",
+      "hat": false,
+      "bag": false,
+      "trajectory": [1, 3]
+    },
+    {
+      "id": 8,
+      "gender": "female",
+      "hat": true,
+      "bag": false,
+      "trajectory": [4, 2, 3, 1]
+    },
+    {
+      "id": 9,
+      "gender": "male",
+      "hat": false,
+      "bag": true,
+      "trajectory": [3, 1, 2, 4]
+    },
+    {
+      "id": 10,
+      "gender": "female",
+      "hat": true,
+      "bag": true,
+      "trajectory": [3]
+    },
+    {
+      "id": 11,
+      "gender": "male",
+      "hat": false,
+      "bag": true,
+      "trajectory": [1, 2, 4]
+    },
+    {
+      "id": 12,
+      "gender": "female",
+      "hat": true,
+      "bag": false,
+      "trajectory": [3, 4]
+    },
+    {
+      "id": 13,
+      "gender": "male",
+      "hat": true,
+      "bag": false,
+      "trajectory": [2, 4]
+    },
+    {
+      "id": 14,
+      "gender": "female",
+      "hat": false,
+      "bag": true,
+      "trajectory": [1, 3]
+    },
+    {
+      "id": 15,
+      "gender": "male",
+      "hat": false,
+      "bag": false,
+      "trajectory": [2]
+    },
+    {
+      "id": 16,
+      "gender": "female",
+      "hat": false,
+      "bag": true,
+      "trajectory": [3, 4]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+version: '3.1'
+intents:
+- affirm
+- analyze_emotions
+- ask_bot_identity
+- ask_competition_date
+- ask_contest_informations
+- ask_date
+- ask_directions
+- ask_group_members
+- ask_group_score
+- ask_groups_count
+- ask_highest_score_group
+- ask_how_are_you
+- ask_individual_info
+- ask_lowest_score_group
+- ask_organizers
+- ask_participants_count
+- ask_person_trajectory
+- ask_position_contest
+- ask_time
+- ask_who_passed_line
+- bot_challenge
+- compare_attributes
+- compare_gender
+- count_people
+- count_people_more_info
+- get_individual_info_attributes
+- deny
+- fallback
+- goodbye
+- greet
+- mall_hours
+- mood_great
+- more_info
+- query_high_scoring_groups
+- reset_slot
+- search_person
+- thank_response
+responses:
+  utter_default:
+  - text: I'm really sorry, but I didn't quite get what you meant there. Mind rephrasing your question or giving me a bit more detail? I'd love to help you out!
+  utter_out_of_context:
+  - text: I'm sorry, I didn't quite get that. Could you rephrase or ask something else?
+  - text: Hmm, that doesn't seem related. Try asking about something else I can help with!
+  - text: I'm not sure I understand. Maybe rephrase your question?
+  utter_greet:
+  - text: Hey there! What's up? I'm here to help with anything you need about the shopping mall or the MIVIA 2025 contest. How can I make your day easier?
+  - text: Hi! Great to see you here. Got questions about the mall or the MIVIA 2025 contest? I've got all the answers you're looking for—just ask away!
+  - text: Hello! Ready to chat? Whether it's info about the shopping center or details on the MIVIA 2025 contest, I've got you covered. What can I help with today?
+  - text: Hey! What can I do for you? If it's about the mall or the MIVIA 2025 contest, I'm your go-to. Let's talk!
+  utter_competition_date:
+  - text: It was January 8th, 2025. Such a great day for the competition!
+  - text: Let me think… Yep, it was on January 8th, 2025. A big day!
+  - text: That was January 8th, 2025. Did you get a chance to check it out?
+  - text: January 8th, 2025! Feels like it just happened, doesn’t it?
+  utter_goodbye:
+  - text: Bye! Take care and have an awesome day ahead! Come back anytime if you need anything.
+  - text: See you later! Hope you have a fantastic day. Don't hesitate to drop by again!
+  - text: Catch you later! Have a great one, and I'll be here if you need more help.
+  - text: Bye for now! Enjoy your day, and feel free to reach out anytime.
+  utter_affirm:
+  - text: Got it! You're absolutely right!
+  - text: Totally! I'm with you on that!
+  - text: Yup, that's spot on! Let's go!
+  utter_thank_response:
+  - text: You're welcome! Let me know if you need anything else.
+  - text: No problem at all! I'm here to help.
+  - text: Glad I could help! Anything else on your mind?
+  - text: You got it! Feel free to ask me more.
+  utter_deny:
+  - text: No worries! Let me know if there's something else you'd like to talk about.
+  - text: Got it! Just let me know if you change your mind or need anything else.
+  - text: All good! I'm here if there's anything else you need.
+  - text: That's fine! Let me know if there's something else on your mind.
+  utter_bot_challenge:
+  - text: I'm  Pepper, made by Group 6, and I'm here to help you! I can answer your questions about the shopping mall, provide details on the MIVIA 2025 contest, and assist with anything else you need. Just ask away!
+  - text: I'm  Pepper created by Group 6! I can help you with information about the mall, guide you through the MIVIA 2025 contest, or answer other questions you might have. What do you need?
+  - text: I'm  Pepper built by Group 6. I'm here to help with anything mall-related, details about the MIVIA 2025 contest, or anything else you've got on your mind. Let's chat!
+  utter_ask_identity:
+  - text: Hey there! I'm Pepper, your friendly assistant. How can I help you today?
+  - text: Hi! I'm Pepper, here to make things easier for you. What can I do for you?
+  - text: Hello! I'm Pepper, your go-to bot for all things shopping mall and MIVIA 2025. What's up?
+  - text: Hey! I'm Pepper, and I'm here to help you out with whatever you need. Just ask!
+  utter_ask_how_are_you:
+  - text: I'm just a bot, but I'm doing great! Thanks for asking. How can I help you?
+  - text: I'm here and ready to go! What about you? How's it going?
+  - text: Feeling awesome, thanks! So, what can I help you with today?
+  - text: I'm good, thanks for asking! How's your day going so far?
+  utter_mall_hours:
+  - text: The mall opens at 9:00 AM and closes at 10:00 PM every day except Sunday, when it closes at 8:00 PM.
+  - text: On weekdays, the mall is open from 9:00 AM to 10:00 PM. On Sundays, it closes at 8:00 PM.
+  utter_contest_info:
+  - text: The Artificial Vision Contest 2025 is super exciting! It's all about detecting people, tracking them, figuring out their attributes (like gender, if they have a bag or a hat), and analyzing their behavior as they move through virtual lines. Teams upload their software, analyze a video recorded live, and produce results in real time. The coolest part? Pepper, the robot referee, summarizes everything and even compares results with the ground truth!
+  - text: "Ah, the Artificial Vision Contest 2025! Imagine this: a live video, people walking around, and your software doing all the magic—detecting, tracking, and analyzing everything from gender to hats and bags. Plus, you'll track their paths across virtual lines! Results are shown live on a screen, and Pepper, our friendly robot, evaluates the scores. Fun, right? "
+  - text: The Artificial Vision Contest is all about showcasing your skills in detection, tracking, and behavior analysis! Teams process a real-time video, detect people, recognize attributes like gender or accessories, and track movements across virtual lines. The cherry on top? Pepper, the robot referee, presents the results and compares them with the ground truth to decide the winner. What else can I tell you?
+  utter_organizers:
+  - text: The contest was organized by Prof. Mario Vento and Prof. Antonio Greco, with the support of the MIVIA Lab at the University of Salerno.
+  - text: It was Prof. Mario Vento and Prof. Antonio Greco who organized the contest, with the help of the MIVIA Lab at the University of Salerno.
+  - text: Prof. Mario Vento and Prof. Antonio Greco, along with the MIVIA Lab at the University of Salerno, were behind the organization of the contest.
+  - text: The contest was made possible by Prof. Mario Vento and Prof. Antonio Greco, supported by the MIVIA Lab at the University of Salerno.
+  - text: Prof. Mario Vento and Prof. Antonio Greco organized the contest with the assistance of the MIVIA Lab at the University of Salerno.
+  utter_directions:
+  - text: I can't help you answer this question, but I suggest you check out the shopping mall map.
+actions:
+- utter_thank_response
+- action_count_people
+- action_count_people_more_info
+- action_query_high_scoring_groups
+- action_reset_slots
+- utter_goodbye
+- action_search_person
+- action_more_info
+- utter_greet
+- action_get_individual_info
+- action_get_position
+- utter_contest_info
+- action_get_group_members
+- action_ask_group_score
+- utter_organizers
+- action_highest_score_group
+- action_get_participants_count
+- action_get_groups_count
+- utter_affirm
+- action_show_trajectory
+- action_compare_gender
+- action_compare_attributes
+- action_show_time
+- utter_mall_hours
+- utter_bot_challenge
+- utter_ask_identity
+- action_ask_date
+- action_lowest_score_group
+- action_ask_who_passed_line
+- action_analyze_face
+- action_out_of_context
+- action_get_individual_info_attributes
+entities:
+- has_hat
+- gender
+- has_bag
+- f_score
+- individual_id
+- position
+- group_number
+- line_id
+slots:
+  gender:
+    type: text
+    mappings:
+    - type: custom
+  has_bag:
+    type: text
+    mappings:
+    - type: custom
+  has_hat:
+    type: text
+    mappings:
+    - type: custom
+  person_ids:
+    type: list
+    influence_conversation: false
+    mappings:
+    - type: custom
+  group_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: group_number
+  position:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: position
+  line_id:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: line_id
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

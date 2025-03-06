@@ -1,0 +1,14 @@
+1,0.895,Sessa Antonio,Molinaro Angelo,Martano Pietro,Ranauro Massimiliano
+6,0.882,Alberti Andrea,Attianese Carmine,Capaldo Vincenzo,Esposito Paolo
+8,0.862,Micera Valentina,Sbardella Raffaele,Setolino Ciro,Volpe Jacopo
+5,0.8,DelGaudio Nunzio, Deangelis Christian,Aliberti Carmine,Casella Giovanni
+3,0.787,Martelli Marco,Marino Andrea,Marmo Alberto,Pasquale Alessandro
+10,0.751,Lamb Giovanni,Zottarelli Egidio,Saturnino Fabrizio,Orlando Palma
+12,0.729,Rescigno Andrea,Zappullo Pietro,Petti Pasquale,Lamberti Mattia
+7,0.725,Martino Michele,Senese Benito,Ommeniello Giovanni,Nicolò Emanuele
+9,0.667,Oltean Bianca,Oltean Miruna,Lebourg Quentin,Engel Alexandre
+14,0.662,Marotta Giuseppe,Tramice Davide,Zaza Vincent
+2,0.594,Magliulo Marco,Moraru Maximilian,Schirò Valentina,Romano Christian
+13,0.562,Russomando Antonio,Memoli Luca,Solimeno Raffaele
+4,0.513,Cardamone Agostino,Dobrev Viktor,Ferraioli Chiara,Antonucci Asja
+15,0.488,Nappo Domenico,Prugno Samuel,Valentino Miriam,Prolise Gaetano

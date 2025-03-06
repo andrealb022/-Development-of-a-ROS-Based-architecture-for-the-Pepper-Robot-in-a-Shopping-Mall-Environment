@@ -1,0 +1,34 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+  epochs: 100
+  constrain_similarities: true
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
+- name: FallbackClassifier
+  threshold: 0.5 
+
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+- name: MemoizationPolicy
+  max_history: 5    # Ricorda dialoghi semplici
+- name: TEDPolicy
+  max_history: 10    # Migliora il contesto
+  epochs: 100    # Numero di epoche di addestramento
+- name: RulePolicy
+  core_fallback_threshold: 0.3
+  core_fallback_action_name: "action_default_fallback"
+  enable_fallback_prediction: True
+
+
+assistant_id: 20250114-115047-vivid-cactus
